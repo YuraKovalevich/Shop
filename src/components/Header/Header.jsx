@@ -13,7 +13,6 @@ import basket from '../../assets/Shops.png'
 const Header = () => {
     return (
         <div className={styles.header}>
-            <div className={styles.header__container}>
                 <div className={styles.header__logo}>
                     <Link to={ROTES.HOME}>
                         <img src={logo} alt="Stuff"/>
@@ -52,9 +51,7 @@ const Header = () => {
                             </span>
                         </Link>
                     </div>
-
                 </div>
-            </div>
         </div>
     );
 };
