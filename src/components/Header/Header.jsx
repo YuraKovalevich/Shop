@@ -5,6 +5,9 @@ import logo from "../../assets/LOGO 1.svg"
 import avatar from "../../assets/avatar.svg"
 import styles from '../../styles/Header.module.css'
 import lupa from '../../assets/lupa.svg'
+import favourites from '../../assets/like.svg'
+import basket from '../../assets/Shops.png'
+
 
 
 const Header = () => {
@@ -38,7 +41,12 @@ const Header = () => {
                         <div className={styles.box}></div>
                     </form>
                     <div className={styles.account}>
-                        <Link to={ROTES.CART} className={styles.cart}>
+                        <Link to={ROTES.HOME} className={styles.favorites} style={{paddingTop:'3px'}}>
+                            <img src={favourites} alt="like"/>
+                        </Link>
+
+                        <Link to={ROTES.CART} className={styles.cart} style={{display:'flex'}}>
+                            <img src={basket} alt="basket"/>
                             <span className={styles.count}>
                                 2
                             </span>

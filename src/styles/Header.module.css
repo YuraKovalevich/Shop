@@ -71,4 +71,32 @@
     width: 100%;
     border: 0;
 }
+.account{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.favorites{
+    cursor: pointer;
+}
+.cart{
+    position: relative;
+}
+.count{
+    text-decoration: none;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: #8B57C6;
+    right: -7px;
+    bottom: -5px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 11px;
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+    font-family: 'Montserrat', serif;
+}
 
