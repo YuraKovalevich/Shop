@@ -1,14 +1,23 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import AppRoutes from "../Routes/Routes";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Sidebar from "../Sidebar/Sidebar";
+import '../../styles/style.css'
+import {useDispatch} from "react-redux";
+import {getCategories} from "../../features/categories/categoriesSlice";
+
 
 const App = () => {
+    const dispatch =useDispatch();
+
+    useEffect(()=>{
+        dispatch(getCategories());
+    },[dispatch])
     return (
-        <div className="app" style={{}}>
+        <div className="app" >
             <Header/>
-            <div className="container" style={{}}>
+            <div className="container" >
                 <Sidebar/>
                 <AppRoutes/>
             </div>
