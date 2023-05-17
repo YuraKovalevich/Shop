@@ -1,5 +1,5 @@
 .sidebar {
-    width: 304px;
+    width: 260px;
     padding: 24px;
     height: 423px;
     display: flex;
@@ -16,11 +16,12 @@
     display: flex;
     flex-direction: column;
     row-gap: 12px;
+    padding: 0;
 }
 
 .link {
     color: #576067FF ;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 17px;
     text-transform: capitalize;
 }
