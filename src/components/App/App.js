@@ -6,6 +6,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import '../../styles/style.css'
 import {useDispatch} from "react-redux";
 import {getCategories} from "../../features/categories/categoriesSlice";
+import {getProducts} from "../../features/products/productsSlice";
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
 
     useEffect(()=>{
         dispatch(getCategories());
+        dispatch(getProducts())
     },[dispatch])
     return (
         <div className="app" >
