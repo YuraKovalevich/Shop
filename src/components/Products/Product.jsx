@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from '../../styles/Product.module.css'
 const SIZES=[4,4.5,5]
 
 const Product = ({title,price,images,description}) => {
     const currentImage=images[0];
+    const [currentSize,setCurrentSize]=useState();
+
     return (
         <section className={styles.product}>
             <div className={styles.images}>
@@ -26,8 +28,14 @@ const Product = ({title,price,images,description}) => {
                 <div className={styles.sizes}>
                     <span>Sizes:</span>
                     <div className={styles.list}>
-                        {SIZES.map(size=>(
-                            <div onClick={()=>{}} className={`${styles.size} `} key={size}>
+                        {SIZES.map((size) => (
+                            <div
+                                onClick={() => setCurrentSize(size)}
+                                className={`${styles.size} ${
+                                    currentSize === size ? styles.active : ""
+                                }`}
+                                key={size}
+                            >
                                 {size}
                             </div>
                         ))}
